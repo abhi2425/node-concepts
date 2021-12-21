@@ -1,0 +1,9 @@
+title: PowerPoint Presentation
+author: Dinky Kukreja
+last-author: Abhinav Jha
+application: Microsoft Office PowerPoint
+application-version: 16.0000
+created-time: 07/04/2021 13:26:39
+last-saved-time: 12/05/2021 10:11:08
+revision-number: 22
+total-editing-time: 174

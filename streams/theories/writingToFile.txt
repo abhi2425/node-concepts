@@ -1,0 +1,13 @@
+1) reader.destroy()--> As soon as it is called, the reading stream will be destroyed and nothing will be to read and then "close" event will be fired for reader and will skip the "end" event, these events will be fire only if you have subscribed them.
+
+2) writer.end()--> As soon as it is called the writing process will be terminated and "finish" event on writer will be fired following that "close" event will be fired.
+
+  ex -: stream-flow.js
+
+                        ***Flow****
+                      ->  writer end event fired
+                      ->  writing finished ('finish event on writer')
+                      ->   4.29   (print data from reader.on("data"))  // whatever we were doing
+                      ->  writer closed
+                      -> reading finished /end  ('end event fired on reader')
+                      ->  reader closed  ("close" event on reader)

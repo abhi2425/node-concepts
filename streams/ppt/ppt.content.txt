@@ -1,0 +1,82 @@
+FiniteState Machines
+
+Made By-: Dinky Kukreja (05516412819)
+                   Abhinav Jha   (04516412819)
+
+VHDL
+Finite State Machine
+FSM are sequential circuit used in digital system to control the behaviour of systems and dataflow paths.
+A finite state machine (FSM) is a digital circuit whose state change depends on both the current state  (of the FSM) and the current inputs.
+The outputs of a FSM are functions of the current state (Moore Model) --or– functions of the current state and current inputs (Mealy Model)
+Synchronous FSMs change their state with respect to a clock input and maintain their state (store their state) in flip-flops
+Conceptual Definition of a Finite State Machine
+The system must be describable by a finite set of states.
+ The system must have a finite set of inputs and/or events that can trigger transitions between states.
+The behavior of the system at a given point in time depends upon the current state and the input or event that occur at that time.
+For each state the system may be in, behavior is defined for each possible input or event.
+ The system has a particular initial state.
+A finite state machine consists of
+State Memory (it stores current state the FSM  is in)
+Next State Logic (determines the next state for FSM  and it depends on current state it is in and input signals)
+Output Logic (generate required output signals from controller for controlling what we want
+
+The number of states is fixed; when an input is executed, the state is changed and an output is possibly produced.
+FSM is only one state at a time. The state it is in at any given time is called current state. It can change from one state to another only after a triggering event or a condition.
+Checklist for FSM
+Port declaration
+Declaration of current state and next state variable
+Binary encoding of state
+Next state logic
+Output logic if any
+Synchronisation of current state to next state
+FSM Block Diagram
+
+logic
+logic
+Synchronous and Asynchronous FSM
+State Diagram
+The binary number inside each circle identifies the state the circle represents. The directed lines are labelled with two binary numbers separated by a slash (/). The input value that causes the state transition is labelled first. The number after the slash symbol / gives the value of the output. For example, the directed line from state 00 to 01 is labelled 1/0, meaning that, if the sequential circuit is in a present state and the input is 1, then the next state is 01 and the output is 0. If it is in a present state 00 and the input is 0, it will remain in that state. A directed line connecting a circle with itself indicates that no change of state occurs. The state diagram provides exactly the same information as the state table and is obtained directly from the state table.
+Types of State Machine
+Mealy FSM
+Moore FSM
+Mealy FSM
+A Mealy Machine is an FSM whose output depends on the present state as well as the present input.
+It can be described by a 6 tuple (Q, ∑, O, δ, X, q0) where −
+Q is a finite set of states.
+∑ is a finite set of symbols called the input alphabet.
+O is a finite set of symbols called the output alphabet.
+δ is the input transition function where δ: Q × ∑ → Q
+X is the output transition function where X: Q × ∑ → O
+q0 is the initial state from where any input is processed (q0 ∈ Q).
+State Table
+State Diagram
+Moore FSM
+Moore machine is an FSM whose outputs depend on only the present state.
+A Moore machine can be described by a 6 tuple (Q, ∑, O, δ, X, q0) where −
+Q is a finite set of states.
+∑ is a finite set of symbols called the input alphabet.
+O is a finite set of symbols called the output alphabet.
+δ is the input transition function where δ: Q × ∑ → Q
+X is the output transition function where X: Q → O
+q0 is the initial state from where any input is processed (q0 ∈ Q).
+
+State Table
+State Diagram
+Comparison between Mealy and Moorey FSM
+FSM In VHDL
+ARCHITECTURE mysolution OF myFSM IS
+SIGNAL Q1, Q0: STD_LOGIC;
+BEGIN
+
+	PROCESS (clk,Q1, Q0, offon, breakin )
+		BEGIN
+			IF (rising_edge(clk)) THEN
+				Q1 <= next state equation for Q1;
+				Q0 <= next state equation for Q0;
+		END PROCESS;
+
+	alarm <= output equation for alarm signal;
+	armed <= outputequation for armed signal;
+
+END mysolution;
+Thank You
