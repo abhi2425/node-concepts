@@ -1,1 +1,18 @@
-File to Read
+
+This is a string that is writing asynchronously using promises 
+
+This is a string that is writing synchronously 
+
+This is a string that is writing asynchronously using callbacks 
+
+This is a string that is writing asynchronously using promises 
+
+This is a string that is writing synchronously 
+
+This is a string that is writing asynchronously using callbacks 
+
+This is a string that is writing synchronously 
+
+This is a string that is writing asynchronously using promises 
+
+This is a string that is writing asynchronously using callbacks 

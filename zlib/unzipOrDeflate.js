@@ -1,7 +1,7 @@
 const { deflate, unzip } = require('zlib')
 
 const input = '.................................'
-deflate(file, (err, buffer) => {
+deflate(input, (err, buffer) => {
   if (err) {
     console.error('An error occurred:', err)
     process.exitCode = 1
