@@ -1,0 +1,24 @@
+
+This is writing synchronously 
+
+This is writing asynchronously using callback function
+
+This is writing asynchronously using promises
+
+This is writing synchronously 
+
+This is writing asynchronously using callback function
+
+This is writing asynchronously using promises
+
+This is writing synchronously 
+
+This is writing asynchronously using callback function
+
+This is writing asynchronously using promises
+
+This is writing synchronously 
+
+This is writing asynchronously using callback function
+
+This is writing asynchronously using promises
